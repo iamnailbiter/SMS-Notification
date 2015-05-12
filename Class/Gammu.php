@@ -39,7 +39,7 @@
 
 class Gammu {
 	/* Initializing gammu bin/EXE */
-	var $gammu = "/usr/local/bin/gammu";
+	var $gammu = "/usr/bin/gammu";
 	var $datetime_format = 'Y-m-d H:i:s';
 	
 	function __construct($gammu_bin_location='',$gammu_config_file='',$gammu_config_section='')
