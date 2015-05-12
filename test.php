@@ -7,7 +7,7 @@ require_once 'Class/Gammu.php';
  * and open the template in the editor.
  */
 
-$gammu_bin 		= '/usr/bin/gammu-smsd';
+$gammu_bin 		= '/usr/bin/gammu';
 $gammu_config 		= '/etc/gammu-smsdrc';
 $gammu_config_section	= ''; // for default section please set "blank" value --> $gammu_config_section = '';
 
