@@ -39,9 +39,11 @@
 
 class Gammu {
 	/* Initializing gammu bin/EXE */
-	var $gammu = "/usr/bin/gammu";
+	var $gammu = "/usr/local/bin/gammu";
 	var $datetime_format = 'Y-m-d H:i:s';
-	
+        
+	private $r;
+        
 	function __construct($gammu_bin_location='',$gammu_config_file='',$gammu_config_section='')
 	{
 		$this->gammu = $gammu_bin_location ? $gammu_bin_location : '/usr/local/bin/gammu';
