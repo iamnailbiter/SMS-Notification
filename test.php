@@ -1,17 +1,12 @@
 <?php
 
 require_once 'Class/Gammu.php';
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-$gammu_bin 		= '/usr/bin/gammu';
-$gammu_config 		= '/etc/gammu-smsdrc';
-$gammu_config_section	= ''; // for default section please set "blank" value --> $gammu_config_section = '';
+$gammu = new Gammu();
 
-$sms = new Gammu($gammu_bin,$gammu_config,$gammu_config_section);
+$message = "Test Daemon PHP";
+$receiver = "088801960320";
 
-$sms->Identify($response);
-print_r($response); 
+$do = $gammu->gammu_inject($message,$receiver);
+
+printf($do);
