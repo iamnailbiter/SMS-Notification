@@ -198,5 +198,3 @@ print_r($response); echo '</pre>';
 $response = $sms->phoneBook('ME');
 echo '<pre>';print_r($response); echo '</pre>'; 
 /**/
-
-?>

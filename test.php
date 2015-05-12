@@ -14,6 +14,6 @@ $gammu_config_section	= ''; // for default section please set "blank" value --> 
 $sms = new Gammu($gammu_bin,$gammu_config,$gammu_config_section);
 
 $response = $sms->phoneBook('ME');
-    echo '<pre>';
+    //echo '<pre>';
     print_r($response);
-    echo '</pre>';
+    //echo '</pre>';
