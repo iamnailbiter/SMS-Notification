@@ -18,10 +18,14 @@ class Gammu {
     
     var $datetime_format = 'Y-m-d H:i:s';
     
-    function inject($message,$receiver,&$output) {
+    function inject($message,$receiver,&$response) {
         $smsd_inject = $this->gammu_inject.' TEXT '.$receiver.' -text "'.$message.'"';
         exec($smsd_inject, $output);
-        if(eregi("Written message with ID",$output)){
+        for($i=0;$i<count($output);$i++) {
+                $response.=$output[$i]."\r\n";
+            }
+	//return $response;
+        if(eregi("Written message with ID",$response)){
             return 1;
         }else{
             return 0;

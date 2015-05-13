@@ -7,10 +7,10 @@ $gammu = new Gammu();
 $message = "Terimakasih telah melakukan pembayaran. Pembayaran sudah kami terima";
 $receiver = "085641867014";
 
-$send = $gammu->inject($message,$receiver,$output);
-print_r($output);
+$send = $gammu->inject($message,$receiver,$response);
+print_r($response);
 if($send==1){
-    echo "SMS Terkirim";
+    echo 'SMS Terkirim\n';
 }else{
-    echo "SMS Gagal";
+    echo 'SMS Gagal\n';
 }
