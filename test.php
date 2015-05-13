@@ -7,6 +7,4 @@ $gammu = new Gammu();
 $message = "Test Daemon PHP";
 $receiver = "088801960320";
 
-$do = $gammu->inject($message,$receiver,$output);
-
-printf($output);
+$gammu->inject($message,$receiver);

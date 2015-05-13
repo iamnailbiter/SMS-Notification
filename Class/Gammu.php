@@ -18,10 +18,10 @@ class Gammu {
     
     var $datetime_format = 'Y-m-d H:i:s';
     
-    function inject($message,$receiver,&$output) {
+    function inject($message,$receiver) {
         $smsd_inject = $this->gammu_inject.' TEXT '.$receiver.' -text "'.$message.'"';
         exec($smsd_inject, $output);
-        return 1;
+        print_r($output);
     }
     
 }
